@@ -1,0 +1,11 @@
+---
+- name: Install fish
+  homebrew:
+    name: fish
+    state: latest
+
+- name: Set fish as default shell
+  command: chsh -s /usr/local/bin/fish
+
+- name: Install oh my fish
+  command: curl -L http://get.oh-my.fish | fish creates=/Users/northys/.local/share/omf
